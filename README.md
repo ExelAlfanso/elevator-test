@@ -10,7 +10,7 @@ Press following keys to test the elevator system:
 
 | Key   | Action                         |
 | ----- | ------------------------------ |
-| **1** | Go to Floor 1 (UP direction)   |
+| **1** | Go to Floor 2 (UP direction)   |
 | **2** | Go to Floor 5 (DOWN direction) |
 | **3** | Go to Floor 3 (UP direction)   |
 | **4** | Go to Floor 2 (DOWN direction) |
