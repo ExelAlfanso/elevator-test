@@ -61,7 +61,10 @@ public class ElevatorManager : MonoBehaviour
     {
         float score = Math.Abs(elevator.currentFloor - request.floor);
         float directionFactor = (elevator.currentFloor < request.floor) ? 1 : -1;
-        return score + directionFactor;
+        float busyPenalty = elevator.QueueSize() * 0.5f;
+
+        return score + directionFactor + busyPenalty;
+
     }
 
 }

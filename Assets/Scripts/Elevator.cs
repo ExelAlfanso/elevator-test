@@ -47,7 +47,7 @@ public class Elevator : MonoBehaviour
     {
         FSM();
     }
-
+    #region Main Methods
     void FSM()
     {
         switch (currentState)
@@ -161,8 +161,9 @@ public class Elevator : MonoBehaviour
                 currentState = ElevatorState.Arrived;
             });
     }
+    #endregion
 
-
+    #region Door Animations
     public Sequence OpenDoors()
     {
         if (currentFloor - 1 < 0 || currentFloor - 1 >= floorDoors.Count)
@@ -195,6 +196,9 @@ public class Elevator : MonoBehaviour
         return seq;
     }
 
+    #endregion
+
+    #region Debug Methods
 
     [ContextMenu("Play Open Doors Animation")]
     public void PlayOpenDoorsAnimation()
@@ -206,5 +210,16 @@ public class Elevator : MonoBehaviour
     {
         CloseDoors().Play();
     }
+
+    #endregion
+
+
+    #region Utility
+    public int QueueSize()
+    {
+        return upQueue.Count + downQueue.Count;
+    }
+
+    #endregion
 }
 

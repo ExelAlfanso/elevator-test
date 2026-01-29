@@ -35,7 +35,7 @@ public class TestRequests : MonoBehaviour
 
     void RequestA()
     {
-        ElevatorManager.Instance.RequestElevator(1, 1);
+        ElevatorManager.Instance.RequestElevator(2, 1);
     }
 
 
